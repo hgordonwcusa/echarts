@@ -144,7 +144,7 @@ export interface SankeySeriesOption
     levels?: SankeyLevelOption[]
 
     edgeLabel?: SeriesLabelOption & {
-        position?: 'inside'
+        position?: 'insideLeft' | 'inside' | 'insideRight'
     }
 }
 
@@ -311,7 +311,8 @@ class SankeySeriesModel extends SeriesModel<SankeySeriesOption> {
 
         edgeLabel: {
             show: false,
-            fontSize: 12
+            fontSize: 12,
+            position: 'inside',
         },
 
         levels: [],
