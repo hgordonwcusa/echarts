@@ -110,6 +110,10 @@ export interface SankeySeriesOption
      * The width of the node
      */
     nodeWidth?: number
+     /**
+     * The minimum height of the node
+     */
+     nodeMinHeight?: number
     /**
      * The vertical distance between two nodes
      */
@@ -291,6 +295,8 @@ class SankeySeriesModel extends SeriesModel<SankeySeriesOption> {
         orient: 'horizontal',
 
         nodeWidth: 20,
+
+        nodeMinHeight: 0,
 
         nodeGap: 8,
         draggable: true,

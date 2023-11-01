@@ -31,6 +31,7 @@ export default function sankeyLayout(ecModel: GlobalModel, api: ExtensionAPI) {
     ecModel.eachSeriesByType('sankey', function (seriesModel: SankeySeriesModel) {
 
         const nodeWidth = seriesModel.get('nodeWidth');
+        const nodeMinHeight = seriesModel.get('nodeMinHeight');
         const nodeGap = seriesModel.get('nodeGap');
 
         const layoutInfo = getViewRect(seriesModel, api);
@@ -57,7 +58,7 @@ export default function sankeyLayout(ecModel: GlobalModel, api: ExtensionAPI) {
 
         const nodeAlign = seriesModel.get('nodeAlign');
 
-        layoutSankey(nodes, edges, nodeWidth, nodeGap, width, height, iterations, orient, nodeAlign);
+        layoutSankey(nodes, edges, nodeWidth, nodeMinHeight, nodeGap, width, height, iterations, orient, nodeAlign);
     });
 }
 
@@ -77,6 +78,7 @@ function layoutSankey(
     nodes: GraphNode[],
     edges: GraphEdge[],
     nodeWidth: number,
+    nodeMinHeight: number,
     nodeGap: number,
     width: number,
     height: number,
@@ -85,7 +87,7 @@ function layoutSankey(
     nodeAlign: SankeySeriesOption['nodeAlign']
 ) {
     computeNodeBreadths(nodes, edges, nodeWidth, width, height, orient, nodeAlign);
-    computeNodeDepths(nodes, edges, height, width, nodeGap, iterations, orient);
+    computeNodeDepths(nodes, edges, height, width, nodeGap, nodeMinHeight, iterations, orient);
     computeEdgeDepths(nodes, orient);
 }
 
@@ -267,6 +269,7 @@ function scaleNodeBreadths(nodes: GraphNode[], kx: number, orient: LayoutOrient)
  * @param height  the whole height of the area to draw the view
  * @param nodeGap  the vertical distance between two nodes
  *     in the same column.
+ * @param nodeMinHeight the minimum height of each node
  * @param iterations  the number of iterations for the algorithm
  */
 function computeNodeDepths(
@@ -275,12 +278,13 @@ function computeNodeDepths(
     height: number,
     width: number,
     nodeGap: number,
+    nodeMinHeight: number,
     iterations: number,
     orient: LayoutOrient
 ) {
     const nodesByBreadth = prepareNodesByBreadth(nodes, orient);
 
-    initializeNodeDepth(nodesByBreadth, edges, height, width, nodeGap, orient);
+    initializeNodeDepth(nodesByBreadth, edges, height, width, nodeGap, nodeMinHeight, orient);
     resolveCollisions(nodesByBreadth, nodeGap, height, width, orient);
 
     for (let alpha = 1; iterations > 0; iterations--) {
@@ -320,6 +324,7 @@ function initializeNodeDepth(
     height: number,
     width: number,
     nodeGap: number,
+    nodeMinHeight: number,
     orient: LayoutOrient
 ) {
     let minKy = Infinity;
@@ -327,7 +332,7 @@ function initializeNodeDepth(
         const n = nodes.length;
         let sum = 0;
         zrUtil.each(nodes, function (node) {
-            sum += node.getLayout().value;
+            sum += Math.max(nodeMinHeight, node.getLayout().value);
         });
         const ky = orient === 'vertical'
                     ? (width - (n - 1) * nodeGap) / sum
@@ -340,7 +345,7 @@ function initializeNodeDepth(
 
     zrUtil.each(nodesByBreadth, function (nodes) {
         zrUtil.each(nodes, function (node, i) {
-            const nodeDy = node.getLayout().value * minKy;
+            const nodeDy = Math.max(nodeMinHeight, node.getLayout().value) * minKy;
             if (orient === 'vertical') {
                 node.setLayout({x: i}, true);
                 node.setLayout({dx: nodeDy}, true);
