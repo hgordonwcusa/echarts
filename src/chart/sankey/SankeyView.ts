@@ -225,7 +225,15 @@ class SankeyView extends ChartView {
                     defaultText: defaultEdgeLabelText
                 }
             );
-            curve.setTextConfig({ position: 'inside' });
+            const edgeLabelPosition = edgeLabelStateModels.normal.get('position').toString();
+            if (['insideLeft', 'insideRight'].includes(edgeLabelPosition)) {
+                curve.setTextConfig({layoutRect: {
+                    x: x1,
+                    y: edgeLabelPosition === 'insideLeft' ? y1 : y2,
+                    width: x2 - x1,
+                    height: edgeLayout.dy,
+                }});
+            }
 
             const emphasisModel = edgeModel.getModel('emphasis');
 

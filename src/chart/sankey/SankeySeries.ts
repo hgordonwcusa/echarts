@@ -111,6 +111,10 @@ export interface SankeySeriesOption
      */
     nodeWidth?: number
     /**
+     * The minimum height of the node
+     */
+     nodeMinHeight?: number
+    /**
      * The vertical distance between two nodes
      */
     nodeGap?: number
@@ -140,7 +144,7 @@ export interface SankeySeriesOption
     levels?: SankeyLevelOption[]
 
     edgeLabel?: SeriesLabelOption & {
-        position?: 'inside'
+        position?: 'insideLeft' | 'inside' | 'insideRight'
     }
 }
 
@@ -292,6 +296,8 @@ class SankeySeriesModel extends SeriesModel<SankeySeriesOption> {
 
         nodeWidth: 20,
 
+        nodeMinHeight: 0,
+
         nodeGap: 8,
         draggable: true,
 
@@ -305,7 +311,8 @@ class SankeySeriesModel extends SeriesModel<SankeySeriesOption> {
 
         edgeLabel: {
             show: false,
-            fontSize: 12
+            fontSize: 12,
+            position: 'inside',
         },
 
         levels: [],
