@@ -59255,6 +59255,11 @@
               }
             });
           }
+          // Label is taller than the actual edge.
+          if (edgeLayout.dy <= edgeLabelStateModels.normal.get('fontSize')) {
+            // this hides the text entirely, would be cool if we could make it show on hover still.
+            curve.getTextContent().hide();
+          }
           var emphasisModel = edgeModel.getModel('emphasis');
           setStatesStylesFromModel(curve, edgeModel, 'lineStyle', function (model) {
             var style = model.getItemStyle();
