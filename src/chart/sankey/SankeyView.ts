@@ -202,6 +202,9 @@ class SankeyView extends ChartView {
             const defaultEdgeLabelText = `${edgeModel.get('value')}`;
             const edgeLabelStateModels = getLabelStatesModels(edgeModel, 'edgeLabel');
 
+            // Hide edge labels that are bigger than the edge itself.
+            edgeLabelStateModels.normal.parentModel.option.show = edgeLayout.dy > edgeLabelStateModels.normal.get('fontSize');
+
             setLabelStyle(
                 curve, edgeLabelStateModels,
                 {
@@ -233,12 +236,6 @@ class SankeyView extends ChartView {
                     width: x2 - x1,
                     height: edgeLayout.dy,
                 }});
-            }
-
-            // Label is taller than the actual edge.
-            if (edgeLayout.dy <= edgeLabelStateModels.normal.get('fontSize')) {
-                // this hides the text entirely, would be cool if we could make it show on hover still.
-                curve.getTextContent().hide();
             }
 
             const emphasisModel = edgeModel.getModel('emphasis');
