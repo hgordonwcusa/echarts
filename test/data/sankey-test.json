@@ -1,438 +1,267 @@
 {
-    "nodes": [
+  "links": [
     {
-      "name": "0 Risk Factors (past)",
-      "itemStyle": {
-      "color": "#9DBBE5"
+      "source": "5 Risks (Offset)",
+      "target": "4 Risks",
+      "value": 1,
+      "lineStyle": {
+        "color": "#66DA26"
       }
     },
     {
-      "name": "1 Risk Factor (past)",
-      "itemStyle": {
-        "color": "#9DBBE5"
+      "source": "4 Risks (Offset)",
+      "target": "2 Risks",
+      "value": 18,
+      "lineStyle": {
+        "color": "#66DA26"
       }
     },
     {
-      "name": "2 Risk Factors (past)",
-      "itemStyle": {
-      "color": "#9DBBE5"
+      "source": "3 Risks (Offset)",
+      "target": "3 Risks",
+      "value": 25,
+      "lineStyle": {
+        "color": "#CDCDCD"
       }
     },
     {
-      "name": "3 Risk Factors (past)",
-      "itemStyle": {
-      "color": "#9DBBE5"
+      "source": "3 Risks (Offset)",
+      "target": "1 Risk",
+      "value": 8,
+      "lineStyle": {
+        "color": "#66DA26"
       }
     },
     {
-      "name": "4 Risk Factors (past)",
-      "itemStyle": {
-        "color": "#9DBBE5"
+      "source": "2 Risks (Offset)",
+      "target": "4 Risks",
+      "value": 16,
+      "lineStyle": {
+        "color": "#DF2B59"
       }
     },
     {
-      "name": "5 Risk Factors (past)",
-      "itemStyle": {
-      "color": "#9DBBE5"
+      "source": "3 Risks (Offset)",
+      "target": "2 Risks",
+      "value": 38,
+      "lineStyle": {
+        "color": "#66DA26"
       }
     },
     {
-      "name": "6 Risk Factors (past)",
-      "itemStyle": {
-      "color": "#9DBBE5"
+      "source": "2 Risks (Offset)",
+      "target": "3 Risks",
+      "value": 23,
+      "lineStyle": {
+        "color": "#DF2B59"
       }
     },
     {
-      "name": "7 Risk Factors (past)",
-      "itemStyle": {
-        "color": "#9DBBE5"
+      "source": "3 Risks (Offset)",
+      "target": "4 Risks",
+      "value": 15,
+      "lineStyle": {
+        "color": "#DF2B59"
       }
     },
     {
-      "name": "0 Risk Factors",
-      "itemStyle": {
-      "color": "#9DBBE5"
+      "source": "2 Risks (Offset)",
+      "target": "1 Risk",
+      "value": 8,
+      "lineStyle": {
+        "color": "#66DA26"
       }
     },
     {
-      "name": "1 Risk Factor",
-      "itemStyle": {
-        "color": "#9DBBE5"
+      "source": "4 Risks (Offset)",
+      "target": "5 Risks",
+      "value": 1,
+      "lineStyle": {
+        "color": "#DF2B59"
       }
     },
     {
-      "name": "2 Risk Factors",
-      "itemStyle": {
-      "color": "#9DBBE5"
+      "source": "4 Risks (Offset)",
+      "target": "3 Risks",
+      "value": 24,
+      "lineStyle": {
+        "color": "#66DA26"
       }
     },
     {
-      "name": "3 Risk Factors",
-      "itemStyle": {
-      "color": "#9DBBE5"
+      "source": "5 Risks (Offset)",
+      "target": "3 Risks",
+      "value": 4,
+      "lineStyle": {
+        "color": "#66DA26"
       }
     },
     {
-      "name": "4 Risk Factors",
-      "itemStyle": {
-        "color": "#9DBBE5"
+      "source": "2 Risks (Offset)",
+      "target": "2 Risks",
+      "value": 20,
+      "lineStyle": {
+        "color": "#CDCDCD"
       }
     },
     {
-      "name": "5 Risk Factors",
-      "itemStyle": {
-      "color": "#9DBBE5"
+      "source": "2 Risks (Offset)",
+      "target": "5 Risks",
+      "value": 2,
+      "lineStyle": {
+        "color": "#DF2B59"
       }
     },
     {
-      "name": "6 Risk Factors",
-      "itemStyle": {
-      "color": "#9DBBE5"
+      "source": "4 Risks (Offset)",
+      "target": "1 Risk",
+      "value": 9,
+      "lineStyle": {
+        "color": "#66DA26"
       }
     },
     {
-      "name": "8 Risk Factors",
-      "itemStyle": {
-      "color": "#9DBBE5"
+      "source": "1 Risk (Offset)",
+      "target": "2 Risks",
+      "value": 2,
+      "lineStyle": {
+        "color": "#DF2B59"
+      }
+    },
+    {
+      "source": "4 Risks (Offset)",
+      "target": "4 Risks",
+      "value": 6,
+      "lineStyle": {
+        "color": "#CDCDCD"
+      }
+    },
+    {
+      "source": "1 Risk (Offset)",
+      "target": "5 Risks",
+      "value": 1,
+      "lineStyle": {
+        "color": "#DF2B59"
+      }
+    },
+    {
+      "source": "5 Risks (Offset)",
+      "target": "2 Risks",
+      "value": 4,
+      "lineStyle": {
+        "color": "#66DA26"
+      }
+    },
+    {
+      "source": "1 Risk (Offset)",
+      "target": "3 Risks",
+      "value": 4,
+      "lineStyle": {
+        "color": "#DF2B59"
+      }
+    },
+    {
+      "source": "1 Risk (Offset)",
+      "target": "1 Risk",
+      "value": 1,
+      "lineStyle": {
+        "color": "#CDCDCD"
+      }
+    },
+    {
+      "source": "5 Risks (Offset)",
+      "target": "5 Risks",
+      "value": 1,
+      "lineStyle": {
+        "color": "#CDCDCD"
+      }
+    },
+    {
+      "source": "1 Risk (Offset)",
+      "target": "4 Risks",
+      "value": 1,
+      "lineStyle": {
+        "color": "#DF2B59"
+      }
+    },
+    {
+      "source": "5 Risks (Offset)",
+      "target": "1 Risk",
+      "value": 1,
+      "lineStyle": {
+        "color": "#66DA26"
       }
     }
   ],
-  "links": [
+  "nodes": [
     {
-      "source": "0 Risk Factors (past)",
-      "target": "0 Risk Factors",
-      "value": 135,
-      "lineStyle": {
-        "color": "rgb(250, 192, 49)"
-      }
-    },
-    {
-      "source": "0 Risk Factors (past)",
-      "target": "1 Risk Factor",
-      "value": 57,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
-      }
-    },
-    {
-      "source": "0 Risk Factors (past)",
-      "target": "2 Risk Factors",
+      "name": "1 Risk (Offset)",
       "value": 9,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
+      "itemStyle": {
+        "color": "#9BBDE5"
       }
     },
     {
-      "source": "1 Risk Factor (past)",
-      "target": "0 Risk Factors",
-      "value": 40,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
+      "name": "2 Risks (Offset)",
+      "value": 69,
+      "itemStyle": {
+        "color": "#9BBDE5"
       }
     },
     {
-      "source": "1 Risk Factor (past)",
-      "target": "1 Risk Factor",
+      "name": "3 Risks (Offset)",
       "value": 86,
-      "lineStyle": {
-        "color": "rgb(250, 192, 49)"
+      "itemStyle": {
+        "color": "#9BBDE5"
       }
     },
     {
-      "source": "1 Risk Factor (past)",
-      "target": "2 Risk Factors",
-      "value": 39,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
+      "name": "4 Risks (Offset)",
+      "value": 58,
+      "itemStyle": {
+        "color": "#9BBDE5"
       }
     },
     {
-      "source": "1 Risk Factor (past)",
-      "target": "3 Risk Factors",
-      "value": 19,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
-      }
-    },
-    {
-      "source": "1 Risk Factor (past)",
-      "target": "4 Risk Factors",
-      "value": 5,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
-      }
-    },
-    {
-      "source": "2 Risk Factors (past)",
-      "target": "0 Risk Factors",
-      "value": 16,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "2 Risk Factors (past)",
-      "target": "1 Risk Factor",
-      "value": 41,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "2 Risk Factors (past)",
-      "target": "2 Risk Factors",
-      "value": 56,
-      "lineStyle": {
-        "color": "rgb(250, 192, 49)"
-      }
-    },
-    {
-      "source": "2 Risk Factors (past)",
-      "target": "3 Risk Factors",
-      "value": 20,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
-      }
-    },
-    {
-      "source": "2 Risk Factors (past)",
-      "target": "5 Risk Factors",
-      "value": 7,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
-      }
-    },
-    {
-      "source": "3 Risk Factors (past)",
-      "target": "0 Risk Factors",
-      "value": 4,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "3 Risk Factors (past)",
-      "target": "1 Risk Factor",
-      "value": 15,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "3 Risk Factors (past)",
-      "target": "2 Risk Factors",
-      "value": 20,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "3 Risk Factors (past)",
-      "target": "3 Risk Factors",
-      "value": 22,
-      "lineStyle": {
-        "color": "rgb(250, 192, 49)"
-      }
-    },
-    {
-      "source": "3 Risk Factors (past)",
-      "target": "4 Risk Factors",
-      "value": 13,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
-      }
-    },
-    {
-      "source": "3 Risk Factors (past)",
-      "target": "6 Risk Factors",
-      "value": 3,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
-      }
-    },
-    {
-      "source": "4 Risk Factors (past)",
-      "target": "0 Risk Factors",
-      "value": 3,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "4 Risk Factors (past)",
-      "target": "2 Risk Factors",
+      "name": "5 Risks (Offset)",
       "value": 11,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
+      "itemStyle": {
+        "color": "#9BBDE5"
       }
     },
     {
-      "source": "4 Risk Factors (past)",
-      "target": "3 Risk Factors",
-      "value": 17,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
+      "name": "1 Risk",
+      "value": 27,
+      "itemStyle": {
+        "color": "#9BBDE5"
       }
     },
     {
-      "source": "4 Risk Factors (past)",
-      "target": "4 Risk Factors",
-      "value": 15,
-      "lineStyle": {
-        "color": "rgb(250, 192, 49)"
+      "name": "2 Risks",
+      "value": 82,
+      "itemStyle": {
+        "color": "#9BBDE5"
       }
     },
     {
-      "source": "4 Risk Factors (past)",
-      "target": "5 Risk Factors",
+      "name": "3 Risks",
+      "value": 80,
+      "itemStyle": {
+        "color": "#9BBDE5"
+      }
+    },
+    {
+      "name": "4 Risks",
+      "value": 39,
+      "itemStyle": {
+        "color": "#9BBDE5"
+      }
+    },
+    {
+      "name": "5 Risks",
       "value": 5,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
-      }
-    },
-    {
-      "source": "5 Risk Factors (past)",
-      "target": "1 Risk Factor",
-      "value": 4,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "5 Risk Factors (past)",
-      "target": "3 Risk Factors",
-      "value": 4,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "5 Risk Factors (past)",
-      "target": "4 Risk Factors",
-      "value": 7,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "5 Risk Factors (past)",
-      "target": "5 Risk Factors",
-      "value": 3,
-      "lineStyle": {
-        "color": "rgb(250, 192, 49)"
-      }
-    },
-    {
-      "source": "5 Risk Factors (past)",
-      "target": "6 Risk Factors",
-      "value": 3,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
-      }
-    },
-    {
-      "source": "5 Risk Factors (past)",
-      "target": "8 Risk Factors",
-      "value": 1,
-      "lineStyle": {
-        "color": "rgb(193, 21, 64)"
-      }
-    },
-    {
-      "source": "6 Risk Factors (past)",
-      "target": "1 Risk Factor",
-      "value": 1,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "6 Risk Factors (past)",
-      "target": "2 Risk Factors",
-      "value": 1,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "6 Risk Factors (past)",
-      "target": "3 Risk Factors",
-      "value": 1,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "6 Risk Factors (past)",
-      "target": "5 Risk Factors",
-      "value": 3,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "7 Risk Factors (past)",
-      "target": "2 Risk Factors",
-      "value": 1,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "7 Risk Factors (past)",
-      "target": "3 Risk Factors",
-      "value": 1,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "7 Risk Factors (past)",
-      "target": "4 Risk Factors",
-      "value": 2,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "7 Risk Factors (past)",
-      "target": "5 Risk Factors",
-      "value": 1,
-      "lineStyle": {
-        "color": "rgb(32, 191, 93)"
-      }
-    },
-    {
-      "source": "8 Risk Factors (past)",
-      "target": "8 Risk Factors",
-      "value": 0,
-      "lineStyle": {
-        "color": "#ffffff"
-      },
-      "edgeLabel": {
-          "color": "#ffffff"
-      }
-    },
-    {
-      "source": "9 Risk Factors (past)",
-      "target": "9 Risk Factors",
-      "value": 0,
-      "lineStyle": {
-        "color": "#ffffff"
-      },
-      "edgeLabel": {
-          "color": "#ffffff"
-      }
-    },
-    {
-      "source": "10+ Risk Factors (past)",
-      "target": "10+ Risk Factors",
-      "value": 0,
-      "lineStyle": {
-        "color": "#ffffff"
-      },
-      "edgeLabel": {
-          "color": "#ffffff"
+      "itemStyle": {
+        "color": "#9BBDE5"
       }
     }
   ]

@@ -18,75 +18,118 @@ under the License.
 -->
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="lib/simpleRequire.js"></script>
-        <script src="lib/config.js"></script>
-        <script src="lib/jquery.min.js"></script>
-    </head>
-    <body>
-        <style>
-            html, body, #main {
-                width: 100%;
-                height: 100%;
-                /*border: 1px solid #000;*/
-            }
-        </style>
-        <div id="main"><div>
-        <script>
-            require([
-                'echarts',
-                './data/sankey-test.json'
-            ], function (echarts, data) {
-                var chart = echarts.init(document.getElementById('main'));
 
-                window.onresize = function () {
-                    chart.resize();
-                };
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="lib/simpleRequire.js"></script>
+    <script src="lib/config.js"></script>
+    <script src="lib/jquery.min.js"></script>
+</head>
 
-                chart.on('click', function (params) {
-                    console.log(params, params.data);
-                });
+<body>
+    <style>
+        html,
+        body,
+        #main {
+            width: 100%;
+            height: 100%;
+            /*border: 1px solid #000;*/
+        }
+    </style>
+    <div id="main" style="height:332px; width: 788px">
+        <div>
+            <script>
+                require([
+                    'echarts',
+                    './data/sankey-test.json'
+                ], function (echarts, data) {
+                    var chart = echarts.init(document.getElementById('main'));
 
-                chart.setOption({
-                    animation: false,
-                    series: [
-                        {
-                            type: 'sankey',
-                            layoutIterations: 0,
-                            draggable: false,
-                            nodeWidth: 200,
-                            nodeMinHeight: 40,
-                            nodeGap: 15,
-                            label: {
-                                position: 'inside',
-                                color: '#000',
-                                formatter: function(params) {
-                                return `${params.name.replace(" (past)", "")}\n${params.value}`;
-                                },
-                                lineHeight: 20
-                            },
-                            edgeLabel: {
-                                show: true,
-                                color: '#000',
-                                position: 'insideLeft',
-                            },
-                            lineStyle: {
-                                opacity: 0.3
-                            },
-                            emphasis: {
-                                focus: 'adjacency',
-                                edgeLabel: {
-                                    show: true,
+                    window.onresize = function () {
+                        chart.resize();
+                    };
+
+                    chart.setOption({
+                        "title": {
+                            "text": "{left|Jan 26th, 2023}{right|Jan 26th, 2024}",
+                            "textStyle": {
+                                "rich": {
+                                    "left": {
+                                        "align": "left",
+                                        "width": 389,
+                                        "padding": [
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "fontWeight": "bolder",
+                                        "fontSize": 18,
+                                        "fontFamily": "sans-serif"
+                                    },
+                                    "right": {
+                                        "align": "right",
+                                        "width": 389,
+                                        "fontWeight": "bolder",
+                                        "fontSize": 18,
+                                        "fontFamily": "sans-serif"
+                                    }
                                 }
+                            }
+                        },
+                        "series": {
+                        "type": "sankey",
+                        "layoutIterations": 0,
+                        "draggable": false,
+                        "nodeWidth": 150,
+                        "nodeMinHeight": 17,
+                        "nodeGap": 15,
+                        "left": 5,
+                        "right": 5,
+                        "top": 25,
+                        "bottom": 5,
+                        "label": {
+                            "position": "inside",
+                            "color": "#000",
+                            "lineHeight": 15,
+                            // removes " (Past)" / " (Offset)" indicator from node titles.
+                            formatter: function (params) {
+                                return `${params.name.replace(/ \(.*?\)/i, "")} - ${params.value}`;
                             },
-                            data: data.nodes,
-                            links: data.links,
-                        }
-                    ]
+                        },
+                        "edgeLabel": {
+                            "show": true,
+                            "color": "#000",
+                            "position": "insideLeft"
+                        },
+                        "lineStyle": {
+                            "opacity": 0.3,
+                            "color": "target"
+                        },
+                        "itemStyle": {
+                            "opacity": 0.7
+                        },
+                        "emphasis": {
+                            focus: 'adjacency',
+                            "lineStyle": {
+                                "opacity": 0.8
+                            },
+                            "edgeLabel": {
+                                "show": true
+                            },
+                        },
+                        blur: {
+                            edgeLabel: {
+                                show: false
+                            }
+                        },
+                        data: data.nodes,
+                        links: data.links,
+                    }
+                    });
                 });
-            });
-        </script>
-    </body>
+            </script>
+</body>
+
 </html>

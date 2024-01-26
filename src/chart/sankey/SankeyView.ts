@@ -18,7 +18,7 @@
 */
 
 import * as graphic from '../../util/graphic';
-import { enterEmphasis, leaveEmphasis, toggleHoverEmphasis, setStatesStylesFromModel } from '../../util/states';
+import { enterEmphasis, leaveEmphasis, toggleHoverEmphasis, setStatesStylesFromModel, setStatesFlag, HOVER_STATE_EMPHASIS } from '../../util/states';
 import { LayoutOrient, ECElement } from '../../util/types';
 import type { PathProps, PathStyleProps } from 'zrender/src/graphic/Path';
 import SankeySeriesModel, { SankeyEdgeItemOption, SankeyNodeItemOption } from './SankeySeries';
@@ -296,6 +296,23 @@ class SankeyView extends ChartView {
             );
 
             (rect as ECElement).disableLabelAnimation = true;
+            (rect as ECElement).onHoverStateChange = function (toState) {
+                if (emphasisModel.get('focus') === 'adjacency') {
+                    node.edges.forEach((edge) => {
+                        // An emphasized node should always emphasize its links
+                        if (toState === 'emphasis') {
+                            setStatesFlag(edge.getGraphicEl(), toState);
+                        }
+    
+                        // If setting a node back to normal, re-set its edge back to normal too.
+                        if (toState === 'normal') {
+                            if ((edge.getGraphicEl() as ECElement).hoverState === HOVER_STATE_EMPHASIS) {
+                                setStatesFlag(edge.getGraphicEl(), toState);
+                            }
+                        }
+                    });
+                }
+            };
 
             rect.setStyle('fill', node.getVisual('color'));
             rect.setStyle('decal', node.getVisual('style').decal);
